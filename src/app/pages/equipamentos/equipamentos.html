@@ -1,0 +1,9 @@
+<div class="page-container">
+  <h2 class="page-title">Nossos Equipamentos</h2>
+  <div class="gallery">
+    <app-equipment-card
+      *ngFor="let item of equipments"
+      [equipment]="item">
+    </app-equipment-card>
+  </div>
+</div>

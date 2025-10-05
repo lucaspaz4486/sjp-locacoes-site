@@ -1,0 +1,17 @@
+<header class="header-container">
+  <div class="logo">
+    <a routerLink="/">SJP Locações</a>
+  </div>
+  <nav class="navigation">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Início</a></li>
+      <li><a routerLink="/equipamentos" routerLinkActive="active-link">Equipamentos</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-switcher">
+    <button (click)="changeTheme('light')" title="Tema Claro">☀️</button>
+    <button (click)="changeTheme('dark')" title="Tema Escuro">🌙</button>
+    <button (click)="changeTheme('sepia')" title="Modo Leitura">📖</button>
+  </div>
+</header>
