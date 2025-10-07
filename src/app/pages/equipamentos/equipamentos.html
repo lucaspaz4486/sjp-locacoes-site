@@ -1,9 +1,38 @@
 <div class="page-container">
   <h2 class="page-title">Nossos Equipamentos</h2>
-  <div class="gallery">
-    <app-equipment-card
-      *ngFor="let item of equipments"
+
+  <div class="filter-container">
+    <button
+      *ngFor="let category of categories"
+      (click)="filterByCategory(category)"
+      [class.active]="category === selectedCategory"
+      class="filter-button">
+      {{ category }}
+    </button>
+  </div>
+
+  <div class="search-container">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Buscar em {{ selectedCategory | lowercase }}..."
+      [(ngModel)]="searchTerm"
+    />
+  </div>
+
+  <div class="gallery" #galleryContainer>
+  <ng-container *ngIf="equipments | filter:searchTerm as filteredEquipments">
+    
+    <app-equipment-card 
+      *ngFor="let item of filteredEquipments" 
       [equipment]="item">
     </app-equipment-card>
-  </div>
+
+    <div *ngIf="filteredEquipments.length === 0" class="no-results">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <h3>Nenhum equipamento encontrado</h3>
+      <p>Tente ajustar sua busca ou selecionar outra categoria.</p>
+    </div>
+
+  </ng-container>
 </div>

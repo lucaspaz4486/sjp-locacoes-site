@@ -1,10 +1,65 @@
 <section class="hero-section">
   <div class="hero-content">
+    <section class="featured-categories">
+      <h2 class="section-title">Navegue por Categoria</h2>
+      <div class="category-grid">
+        <a *ngFor="let category of featuredCategories" [routerLink]="['/equipamentos']"
+          [queryParams]="{ categoria: category.link }" class="category-card">
+          <i [class]="category.icon"></i>
+          <h3>{{ category.name }}</h3>
+        </a>
+      </div>
+    </section>
+
+    <section class="differentiators">
+      <h2 class="section-title">Por que escolher a SJP Locações?</h2>
+      <div class="differentiators-grid">
+        <div class="differentiator-item">
+          <i class="fa-solid fa-truck-fast"></i>
+          <h3>Entrega Rápida</h3>
+          <p>Receba o equipamento na sua obra com agilidade e pontualidade.</p>
+        </div>
+        <div class="differentiator-item">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h3>Equipamentos Revisados</h3>
+          <p>Nossa frota passa por manutenção preventiva rigorosa para sua segurança.</p>
+        </div>
+        <div class="differentiator-item">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Atendimento Especializado</h3>
+          <p>Nossa equipe está pronta para te ajudar a escolher o melhor equipamento.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <h2 class="section-title">Alugar é Simples</h2>
+      <div class="steps-container">
+        <div class="step-item">
+          <span>1</span>
+          <h3>Escolha o Equipamento</h3>
+          <p>Navegue em nosso catálogo e encontre o que precisa.</p>
+        </div>
+        <div class="step-item">
+          <span>2</span>
+          <h3>Solicite um Orçamento</h3>
+          <p>Entre em contato pelo WhatsApp com sua lista de itens.</p>
+        </div>
+        <div class="step-item">
+          <span>3</span>
+          <h3>Agende a Entrega</h3>
+          <p>Combinamos o melhor dia e horário para você receber na obra.</p>
+        </div>
+      </div>
+    </section>
+
     <h1>Aluguel de Máquinas e Equipamentos para sua Obra</h1>
     <p class="subtitle">
-      Soluções completas e seguras para construção civil. Na SJP Locações você encontra betoneiras, marteletes, andaimes e muito mais, com a confiança e a agilidade que seu projeto precisa.
+      Soluções completas e seguras para construção civil. Na SJP Locações você encontra betoneiras, marteletes, andaimes
+      e muito mais, com a confiança e a agilidade que seu projeto precisa.
     </p>
-    <a href="https://wa.me/55996584040?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." class="cta-button" target="_blank">
+    <a href="https://wa.me/5561996584040?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." class="cta-button"
+      target="_blank">
       Faça um Orçamento pelo WhatsApp<br>
       <p>Ou ligue 3391-4040</p>
     </a>

@@ -1,0 +1,63 @@
+@import '../../../styles.scss';
+
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 5%;
+  animation: fadeIn 1s ease-out;
+}
+
+.contact-info {
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: var(--text-light-color);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+
+    i {
+      font-size: 1.25rem;
+      color: var(--primary-color);
+      width: 30px;
+      margin-right: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+.map-container {
+  width: 100%;
+  min-height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+@media (max-width: 992px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+}
