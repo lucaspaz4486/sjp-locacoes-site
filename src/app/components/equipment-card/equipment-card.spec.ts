@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideZonelessChangeDetection } from '@angular/core';
 import { EquipmentCardComponent } from './equipment-card';
 
 describe('EquipmentCard', () => {
@@ -9,6 +9,7 @@ describe('EquipmentCard', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [EquipmentCardComponent],
+      providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(EquipmentCardComponent);

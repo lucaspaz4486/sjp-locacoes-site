@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideZonelessChangeDetection } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing'
 import { ContatoComponent } from './contato';
 
 describe('Contato', () => {
@@ -8,7 +9,8 @@ describe('Contato', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContatoComponent],
+      imports: [ContatoComponent, RouterTestingModule],
+      providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ContatoComponent);
