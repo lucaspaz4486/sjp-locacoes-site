@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EquipamentosComponent } from './equipamentos';
+import { RouterTestingModule } from '@angular/router/testing'
 
 describe('Equipamentos', () => {
   let component: EquipamentosComponent;
@@ -8,7 +8,7 @@ describe('Equipamentos', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EquipamentosComponent],
+      imports: [EquipamentosComponent, RouterTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(EquipamentosComponent);

@@ -14,8 +14,8 @@ import { FooterComponent } from './components/footer/footer';
     HeaderComponent,
     FooterComponent
   ],
-  templateUrl: './app.html',      // <-- CORRIGIDO
-  styleUrls: ['./app.scss']        // <-- CORRIGIDO
+  templateUrl: './app.html',
+  styleUrls: ['./app.scss']
 })
 export class AppComponent {
   title = 'sjp-locacoes-frontend';
