@@ -1,4 +1,6 @@
-name: Angular CI Pipeline
+# .github/workflows/main.yml
+
+name: Angular CI/CD Pipeline
 
 on:
   push:
@@ -32,13 +34,11 @@ jobs:
           name: production-build
           path: dist/sjp-locacoes-frontend/
 
-    deploy:
-    
+  deploy:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
@@ -47,11 +47,8 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
         with:
-         
           publish-dir: '.'
-         
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
         env:
-    
-          NETLIFY_CLI_VERSION: "17"
+          NETLIFY_CLI_VERSION: '17'
