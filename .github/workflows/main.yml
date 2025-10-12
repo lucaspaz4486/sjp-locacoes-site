@@ -37,6 +37,14 @@ jobs:
         with:
           name: production-build
 
+      - name: Debug Secrets
+        run: |
+          echo "Site ID starts with: ${{ env.SITE_ID_PREFIX }}"
+          echo "Auth Token starts with: ${{ env.AUTH_TOKEN_PREFIX }}"
+        env:
+          SITE_ID_PREFIX: ${{ secrets.NETLIFY_SITE_ID && secrets.NETLIFY_SITE_ID[:5] }}
+          AUTH_TOKEN_PREFIX: ${{ secrets.NETLIFY_AUTH_TOKEN && secrets.NETLIFY_AUTH_TOKEN[:5] }}
+
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
         with:
