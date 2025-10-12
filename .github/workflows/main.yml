@@ -10,42 +10,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests
-        run: npx ng test --no-watch --browsers=ChromeHeadless
-      - name: Build application
-        run: npx ng build
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - run: npm install
+      - run: npx ng test --no-watch --browsers=ChromeHeadless
+      - run: npx ng build
+      - uses: actions/upload-artifact@v4
         with:
           name: production-build
-          path: dist/sjp-locacoes-frontend/
+          # AQUI ESTÁ A MUDANÇA: Pegamos o CONTEÚDO da pasta browser
+          path: dist/sjp-locacoes-frontend/browser/
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           name: production-build
-
-      # Passo de Depuração para listar a estrutura de arquivos
-      - name: List files in the workspace
-        run: ls -R
-
-      - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v3.0
+      - uses: nwtgck/actions-netlify@v3.0
         with:
+          # Agora '.' está correto, pois o artefato não tem mais a pasta extra
           publish-dir: '.'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_CLI_VERSION: "17"
