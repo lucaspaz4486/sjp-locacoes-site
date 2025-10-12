@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -10,13 +11,10 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent {
   featuredCategories = [
-    { name: 'Concreto', icon: 'fa-solid fa-cube', link: 'Concreto' },
+    { name: 'Andaime', icon: 'fa-solid fa-tower-observation', link: 'Andaime' },
+    { name: 'Concreto', icon: 'fa-solid fa-cubes', link: 'Concreto' },
     { name: 'Demolição', icon: 'fa-solid fa-hammer', link: 'Demolição' },
-    { name: 'Andaime', icon: 'fa-solid fa-layer-group', link: 'Andaime' },
-    {
-      name: 'Compactação',
-      icon: 'fa-solid fa-down-left-and-up-right-to-center',
-      link: 'Compactação',
-    },
+    { name: 'Escoras', icon: 'fa-solid fa-building-columns', link: 'Escoras' },
+    { name: 'Serra', icon: 'fa-solid fa-scissors', link: 'Serra' },
   ];
 }
