@@ -37,13 +37,9 @@ jobs:
         with:
           name: production-build
 
-      - name: Debug Secrets
-        run: |
-          echo "Site ID starts with: $(echo $SITE_ID | cut -c1-5)"
-          echo "Auth Token starts with: $(echo $AUTH_TOKEN | cut -c1-5)"
-        env:
-          SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      # Passo de Depuração para listar a estrutura de arquivos
+      - name: List files in the workspace
+        run: ls -R
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
