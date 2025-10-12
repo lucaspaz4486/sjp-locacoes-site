@@ -173,3 +173,22 @@ h1 {
     line-height: 1.6;
   }
 }
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .category-grid,
+  .differentiators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-container {
+    gap: 3rem;
+  }
+}
