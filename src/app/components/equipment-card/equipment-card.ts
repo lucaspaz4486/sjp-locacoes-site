@@ -10,6 +10,5 @@ import { Equipment } from '../../data/mock-equipments';
   styleUrls: ['./equipment-card.scss']
 })
 export class EquipmentCardComponent {
-  // A anotação @Input() permite que este componente receba dados de um componente "pai"
   @Input() equipment!: Equipment;
 }

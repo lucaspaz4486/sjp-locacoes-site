@@ -1,5 +1,3 @@
-/* src/styles.scss */
-
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
@@ -25,8 +23,6 @@
   font-weight: 700;
   src: url('/assets/fonts/roboto-v49-latin-700.woff2') format('woff2');
 }
-
-/* --- Paletas de Cores --- */
 
 :root {
   --primary-color: #FF6700;
@@ -62,8 +58,6 @@ body.theme-sepia {
   --border-color: #d8c6aa;
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
-
-/* --- Estilos Globais --- */
 
 * {
   box-sizing: border-box;

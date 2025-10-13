@@ -33,7 +33,6 @@ h1 {
   font-weight: bold;
   color: #fff;
   background-color: #28a745;
-  /* Cor do WhatsApp */
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -52,10 +51,9 @@ h1 {
   margin-bottom: 3rem;
 }
 
-/* --- Seção de Categorias em Destaque --- */
 .featured-categories {
   padding: 4rem 5%;
-  animation: fadeIn 1s ease-out 0.2s; // 0.2s de atraso
+  animation: fadeIn 1s ease-out 0.2s;
   animation-fill-mode: both;
 }
 
@@ -95,7 +93,6 @@ h1 {
   }
 }
 
-/* --- Seção de Diferenciais --- */
 .differentiators {
   padding: 4rem 5%;
   background-color: var(--card-background);
@@ -129,7 +126,6 @@ h1 {
   }
 }
 
-/* --- Seção Como Funciona --- */
 .how-it-works {
   padding: 4rem 5%;
 }

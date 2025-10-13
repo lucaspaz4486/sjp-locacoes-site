@@ -1,8 +1,7 @@
-/* src/app/components/footer/footer.component.scss */
 .footer-container {
   text-align: center;
   padding: 2rem;
   background-color: var(--heading-color);
   color: var(--background-color);
-  margin-top: auto; /* Empurra o rodapé para baixo */
+  margin-top: auto;
 }

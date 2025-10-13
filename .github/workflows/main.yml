@@ -1,10 +1,8 @@
-# .github/workflows/main.yml
-
 name: Angular CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   build:

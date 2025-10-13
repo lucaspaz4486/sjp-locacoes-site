@@ -1,4 +1,3 @@
-// src/app/pages/equipamentos/equipamentos.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -19,7 +18,6 @@ export class EquipamentosComponent implements OnInit {
 
   private allEquipments: Equipment[] = EQUIPMENTS;
 
-  // Propriedades para os filtros
   equipments: Equipment[] = [];
   searchTerm: string = '';
 
@@ -40,7 +38,6 @@ export class EquipamentosComponent implements OnInit {
     });
   }
 
-  // Função de filtro
   filterByCategory(category: string): void {
     this.selectedCategory = category;
 

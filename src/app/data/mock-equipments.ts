@@ -1,4 +1,3 @@
-// Define a "forma" de um objeto de equipamento
 export interface Equipment {
   id: number;
   name: string;
@@ -7,7 +6,6 @@ export interface Equipment {
   category: string;
 }
 
-// Nossa lista de equipamentos
 export const EQUIPMENTS: Equipment[] = [
   {
     id: 1,

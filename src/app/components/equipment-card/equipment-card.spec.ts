@@ -1,5 +1,3 @@
-// src/app/components/equipment-card/equipment-card.spec.ts
-
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { EquipmentCardComponent } from './equipment-card';
