@@ -1,5 +1,6 @@
 <div class="card">
-  <img [src]="equipment.imageUrl" [alt]="equipment.name" class="card-image">
+  <!-- Atributo loading="lazy" adicionado para otimização de performance (Core Web Vitals) -->
+  <img [src]="equipment.imageUrl" [alt]="equipment.name" class="card-image" loading="lazy">
   <div class="card-content">
     <h3 class="card-title">{{ equipment.name }}</h3>
     <p class="card-description">{{ equipment.description }}</p>

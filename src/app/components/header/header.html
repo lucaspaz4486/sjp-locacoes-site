@@ -2,7 +2,8 @@
   <div class="logo">
     <a routerLink="/">SJP Locações</a>
   </div>
-  <nav class="navigation">
+
+  <nav class="navigation" aria-label="Navegação principal">
     <ul>
       <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Início</a></li>
       <li><a routerLink="/equipamentos" routerLinkActive="active-link">Equipamentos</a></li>
@@ -10,9 +11,9 @@
     </ul>
   </nav>
 
-  <div class="theme-switcher">
-    <button (click)="changeTheme('light')" title="Tema Claro">☀️</button>
-    <button (click)="changeTheme('dark')" title="Tema Escuro">🌙</button>
-    <button (click)="changeTheme('sepia')" title="Modo Leitura">📖</button>
+  <div class="theme-switcher" aria-label="Alternador de temas">
+    <button (click)="changeTheme('light')" title="Tema Claro" aria-label="Ativar tema claro">☀️</button>
+    <button (click)="changeTheme('dark')" title="Tema Escuro" aria-label="Ativar tema escuro">🌙</button>
+    <button (click)="changeTheme('sepia')" title="Modo Leitura" aria-label="Ativar modo leitura">📖</button>
   </div>
 </header>

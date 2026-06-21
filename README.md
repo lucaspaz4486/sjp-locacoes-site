@@ -1,59 +1,77 @@
-# SjpLocacoesFrontend
+# 🏗️ SJP Locações - Plataforma de Aluguel de Equipamentos
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
+Uma Single Page Application (SPA) moderna e responsiva desenvolvida para catalogar e facilitar o orçamento de máquinas e equipamentos para construção civil. O foco deste projeto é **alta performance**, **acessibilidade (A11y)** e **excelente Experiência do Usuário (UX)**.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-To start a local development server, run:
+## ✨ Principais Funcionalidades
 
-```bash
-ng serve
-```
+* **Arquitetura Standalone & Zoneless:** Desenvolvido sem a dependência do `Zone.js` (`provideZonelessChangeDetection`), utilizando a estratégia de detecção de mudanças `OnPush` para máxima otimização de renderização.
+* **Sistema de Temas Dinâmico (Theming):** Alternância instantânea entre os modos **Claro, Escuro e Sépia**, construído com variáveis nativas do CSS (`:root`) sem vazamento de escopo.
+* **Filtro Avançado Customizado (Custom Pipe):** Sistema de busca multi-campo que ignora formatações e acentuação (Normalização NFD) para uma busca à prova de erros tipográficos.
+* **Layout Fluido & Mobile First:** Construído com CSS Grid e Flexbox nativos, garantindo adaptação perfeita em qualquer resolução (Desktop, Tablet e Mobile).
+* **Navegação SPA Otimizada:** Restauração inteligente da posição de rolagem (Scroll Restoration) via Angular Router para navegação orgânica.
+* **Integração de Mídia rica:** Hero section utilizando vídeos 3D em loop como background de alta performance.
+* **Conversão Direta:** Floating Action Button (FAB) com mensagem pré-formatada integrada à API nativa do WhatsApp.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠️ Tecnologias Utilizadas
 
-## Code scaffolding
+* **Framework:** Angular 17+ (Standalone Components)
+* **Linguagem:** TypeScript
+* **Estilização:** SCSS / Variáveis CSS / CSS Grid
+* **Ícones:** FontAwesome
+* **Deploy & Hospedagem:** Netlify
+* **CI/CD:** GitHub Actions
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🚀 Como executar o projeto localmente
 
-```bash
-ng generate component component-name
-```
+### Pré-requisitos
+* Node.js (versão 18 ou superior)
+* Angular CLI instalado globalmente (`npm install -g @angular/cli`)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Passos para instalação
 
-```bash
-ng generate --help
-```
+1. Clone o repositório:
 
-## Building
+        git clone [https://github.com/lucaspaz4486/sjp-locacoes-site.git](https://github.com/lucaspaz4486/sjp-locacoes-site.git)
 
-To build the project run:
+2. Acesse a pasta do projeto:
 
-```bash
-ng build
-```
+        cd sjp-locacoes-site
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. Instale as dependências:
 
-## Running unit tests
+        npm install
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+4. Inicie o servidor de desenvolvimento:
 
-```bash
-ng test
-```
+        ng serve
 
-## Running end-to-end tests
+5. Abra o navegador e acesse: `http://localhost:4200`
 
-For end-to-end (e2e) testing, run:
+## ⚙️ Integração Contínua e Deploy (CI/CD)
 
-```bash
-ng e2e
-```
+Este projeto possui uma esteira de deploy automatizada configurada via **GitHub Actions**. 
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Sempre que um novo código é enviado para a branch `main`, o pipeline (`main.yml`) realiza automaticamente os seguintes passos:
+1. Faz o checkout do código.
+2. Configura o ambiente Node.js (v20).
+3. Instala as dependências (`npm install`).
+4. Executa os testes automatizados em ambiente *Headless* para garantir a integridade da aplicação.
+5. Gera a *build* de produção otimizada (`ng build`).
+6. Realiza o deploy do artefato gerado diretamente para o **Netlify**.
 
-## Additional Resources
+## 👨‍💻 Autor
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Lucas da Silva Paz**
+* Desenvolvedor Web
+* [LinkedIn](https://www.linkedin.com/in/lucas-da-silva-paz-7b752b214)
+* [GitHub](https://github.com/lucaspaz4486)
+* E-mail: lucaspaz4486@gmail.com
+
+---
+*© 2026 SJP Locações. Todos os direitos reservados.*

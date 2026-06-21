@@ -1,7 +1,124 @@
 .footer-container {
+  /* Mantendo o alinhamento com as variáveis globais do SJP Locações */
+  padding: 4rem 2rem 2rem;
+  background-color: var(--card-background, #ffffff);
   text-align: center;
-  padding: 2rem;
-  background-color: var(--heading-color);
-  color: var(--background-color);
+  border-top: 1px solid var(--border-color, #e0e0e0);
   margin-top: auto;
+  /* Empurra o footer para o final da página */
+}
+
+.footer-header h2 {
+  color: var(--heading-color, #333333);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-header p {
+  color: var(--text-light-color, #666666);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.contato-grid {
+  display: grid !important;
+  /* 1. REGRA PADRÃO (Mobile First): 1 coluna para celulares */
+  grid-template-columns: 1fr !important;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  align-items: stretch;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+.contato-card {
+  width: 100%;
+  /* Estabiliza o card dentro da sua coluna */
+  background-color: var(--background-color, #f9f9f9);
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border-color, #e0e0e0);
+}
+
+.contato-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+  width: 65px;
+  height: 65px;
+  background-color: var(--card-background, #ffffff);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+}
+
+.logo-img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.contato-card h4 {
+  font-size: 1.3rem;
+  color: var(--heading-color, #333333);
+  margin: 0 0 0.5rem 0;
+}
+
+.contato-card p {
+  font-size: 0.95rem;
+  color: var(--text-light-color, #666666);
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.btn-outline {
+  display: block;
+  /* Alterado de inline-block para block para preencher melhor o espaço */
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--heading-color, #333333);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--heading-color, #333333);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  /* Garante que o padding não quebre a largura */
+}
+
+.btn-outline:hover {
+  background-color: var(--heading-color, #333333);
+  color: var(--background-color, #ffffff);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color, #e0e0e0);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: var(--text-light-color, #666666);
+  font-size: 0.85rem;
+  margin: 0;
 }

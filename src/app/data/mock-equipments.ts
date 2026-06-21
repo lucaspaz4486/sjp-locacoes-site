@@ -1,9 +1,13 @@
+// Define estritamente quais são as categorias válidas no sistema.
+// Isso impede erros de digitação (typos) na hora de cadastrar ou filtrar os produtos.
+export type EquipmentCategory = 'Andaime' | 'Concreto' | 'Demolição' | 'Escoras' | 'Serra';
+
 export interface Equipment {
   id: number;
   name: string;
   description: string;
   imageUrl: string;
-  category: string;
+  category: EquipmentCategory; // Usando o tipo estrito em vez de uma string genérica
 }
 
 export const EQUIPMENTS: Equipment[] = [

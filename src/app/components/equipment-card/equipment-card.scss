@@ -4,25 +4,23 @@
   overflow: hidden;
   background-color: var(--card-background);
   box-shadow: 0 4px 6px var(--shadow-color);
-  &:hover {
-    box-shadow: 0 8px 12px var(--shadow-color);
-  }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+  /* Efeito de elevação unificado e mantendo a consistência do design system (variáveis) */
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 12px var(--shadow-color);
   }
 }
 
 .card-image {
   width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: contain;
+  aspect-ratio: 4 / 3; 
+  object-fit: cover;
   display: block;
-  background-color: #f0f0f0;
+  background-color: transparent;
+  border-bottom: 1px solid var(--border-color);
 }
-
 .card-content {
   padding: 1.5rem;
 }
